@@ -11,6 +11,7 @@ const path = require("path");
 dotenv.config();
 
 const PORT = process.env.PORT || 5000;
+const HOST = process.env.HOST || '0.0.0.0';
 const mongodbUrl = config.MONGODB_URL;
 
 mongoose
