@@ -10,7 +10,7 @@ const path = require("path");
 
 dotenv.config();
 
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 const HOST = process.env.HOST || '0.0.0.0';
 const mongodbUrl = config.MONGODB_URL;
 
@@ -38,8 +38,12 @@ if (process.env.NODE_ENV === "production") {
     });
 }
 
-app.listen(PORT, () =>
-    console.log(
-        "************************************************** \n The Server has started at : http://localhost:5000"
-    )
-);
+app.listen(port, function() {
+    console.log('server is up on port ' + port)
+})
+
+// app.listen(PORT, () =>
+//     console.log(
+//         "************************************************** \n The Server has started at : http://localhost:5000"
+//     )
+// );
